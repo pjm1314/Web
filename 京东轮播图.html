@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title>
+    <style>
+        .wrapper {
+            width: 590px;
+            height: 470px;
+            background-color: #fff;
+            position: relative;
+
+        }
+
+        .focus-item-img {
+            width: 590px;
+            height: 470px;
+        }
+
+        .wrapper .slider-item {
+            list-style: none;
+            position: absolute;
+        }
+
+        .slider-item:nth-child(2) {
+            z-index: 1;
+        }
+
+        .slider-control {
+            width: 120px;
+            height: 15px;
+            /* background-color: burlywood; */
+            position: relative;
+            left: 30px;
+            bottom: 40px;
+            z-index: 2;
+            padding-top: 5px;
+        }
+        .slider-control-bt{
+            /* display: inline-block; */
+            float: left;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: #ffffff66;
+            /* z-index: 3; */
+            margin-right: 4px;
+
+            
+        }
+    .slider-control-bt:hover{
+        background: silver;
+        /* background-color: aqua; */
+
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <li class="slider-item"><a href="#" class="focus-item"><img class="focus-item-img" id="swap1"
+                    src="//img11.360buyimg.com/pop/s1180x940_jfs/t1/168853/23/17811/92420/6073fb60E13ed8134/0cd0dc287b70a193.jpg.webp"></a>
+        </li>
+        <li class="slider-item"><a href="#" class="focus-item"><img class="focus-item-img"
+                    src="//img12.360buyimg.com/pop/s1180x940_jfs/t1/168765/33/18381/78449/60766642E9d6dbfad/d79f18e500c97dab.jpg.webp"></a>
+        </li>
+        <li class="slider-item"><a href="#" class="focus-item"><img class="focus-item-img"
+                    src="//img11.360buyimg.com/pop/s1180x940_jfs/t1/158519/28/12915/101230/604c4559E1cec7ab5/6a8bfc0910be4989.jpg.webp"></a>
+        </li>
+        <li class="slider-item"><a href="#" class="focus-item"><img class="focus-item-img"
+                    src="//imgcps.jd.com/ling4/6038430/5Lqs5Lic5aW954mp57K-6YCJ/MuS7tjjmipgz5Lu2N-aKmA/p-5bd8253082acdd181d02fa3b/ba8cb65f/cr/s/q.jpg"></a>
+        </li>
+        <li class="slider-item"><a href="#" class="focus-item"><img class="focus-item-img"
+                    src="//img30.360buyimg.com/pop/s1180x940_jfs/t1/163337/19/18569/100671/607806efEd09e99e1/697868117268fb02.jpg.webp"></a>
+        </li>
+        <li class="slider-item"><a href="#" class="focus-item"><img class="focus-item-img"
+                    src="//imgcps.jd.com/ling4/2922989/6LaF5YC85aW954mp5oOg5LiN5YGc/5aW96Iy25aW95rC05aW955Sf5rS7/p-5bd8253082acdd181d02fa68/2ef324da/cr/s/q.jpg"></a>
+        </li>
+        <li class="slider-item"><a href="#" class="focus-item"><img class="focus-item-img"
+                    src="//img13.360buyimg.com/pop/s1180x940_jfs/t1/172968/21/4057/99381/6076b04cE5f3c89dc/137e7f4c7590dfa7.jpg.webp"></a>
+        </li>
+        <li class="slider-item"><a href="#" class="focus-item"><img class="focus-item-img"
+                    src="//img30.360buyimg.com/pop/s1180x940_jfs/t1/163798/30/18097/99328/607696aeE57640feb/4412848c28ca3c27.jpg.webp">
+        </li>
+    </div>
+    <div class="slider-control">
+        <a href="#swap1" class="slider-control-bt"></a>
+        <a href="#" class="slider-control-bt"></a>
+        <a href="#" class="slider-control-bt"></a>
+        <a href="#" class="slider-control-bt"></a>
+        <a href="#" class="slider-control-bt"></a>
+        <a href="#" class="slider-control-bt"></a>
+        <a href="#" class="slider-control-bt"></a>
+        <a href="#" class="slider-control-bt"></a>
+    </div>
+</body>
+
+</html>

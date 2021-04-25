@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../icon/iconfont.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            height: 31px;
+            background-color: #E3E4E5;
+            position: relative;
+        }
+
+        .w {
+            width: 1200px;
+            height: 31px;
+            background-color: antiquewhite;
+            margin-left: 159.6px;
+            float: left;
+
+        }
+
+        .f1 {
+            list-style: none;
+
+        }
+        .tb-home {
+            display: block;
+            height: 31px;
+            /* width: 73px; */
+            /* background-color: aqua; */
+            float: left;
+            line-height: 31px;
+            padding-right: 10px;
+
+        }
+
+        .dropdown {
+            display: block;
+            height: 31px;
+            /* width: 76px; */
+            /* background-color: aquamarine; */
+            float: left;
+            line-height: 31px;
+
+        }
+
+        .iconfont {
+            height: 16px;
+            width: 21px;
+
+        }
+
+        a {
+            font-size: 14px;
+            text-decoration: none;
+            color: #999;
+        }
+
+        .ui-text {
+            color: #999;
+        }
+
+
+
+        .link-login.sty-red {
+            text-align: center;
+        }
+
+        .for1 {
+            list-style: none;
+
+        }
+
+        .style-red {
+            color: #F30213;
+
+        }
+        .right{
+            float: right;
+
+        }
+        .right>.fr li{
+            display: inline-block;
+            margin-right: 2px;
+
+
+        }
+
+
+        .spacer {
+            width: 1px;
+            height: 12px;
+            list-style: none;
+            background-color:#ccc;
+
+        }
+
+        .for2 {
+            list-style: none;
+        }
+        .right{
+            height: 31px;
+            line-height: 31px;
+        }
+        .link-login :hover{
+            color: #F30213;
+        }
+        .ul-list:hover{
+            color: #F30213;
+        }
+        .city{
+            background-color: chocolate;
+            height: 432px;
+            width: 320px;
+            position: absolute;
+            top: 31px;
+            left: 245px;
+            display: none;
+            border: 1px solid rgb(204, 204, 204);
+        }
+        .f1:hover .dropdown {
+            background-color: chocolate ;
+            border-bottom: none;
+        }
+        .f1:hover .city{
+            background-color: chocolate;
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="w">
+            <li class="tb-home "><i class="iconfont">&#xe600;</i><a href="#" class="ul-list"> 京东首页</a></li>
+            <ul class="f1">
+               
+                <li class="dropdown "><i class="iconfont">&#xe615;</i><span class="ui-text">江西</span></li>
+                <div class="city"></div>
+            </ul>
+            <div class="right">
+                <ul class="fr">
+                    <li class="for1"><a href="#" class="link-login">你好,请登录</a>&nbsp;&nbsp;<a href="#"
+                            class="style-red">免费注册</a>
+
+                    </li>
+                    <li class="spacer"></li>
+                    <li class="for2">
+                       <a href="#" class="ul-list"> 我的订单</a>
+                    </li>
+                    <li class="spacer"></li>
+                    <li> <a href="#" class="ul-list"> 我的京东</a><i class="iconfont">&#xe6cd;</i></li>
+                    <li class="spacer"></li>
+                    <li> <a href="#" class="ul-list"> 京东会员</a></li>
+                    <li class="spacer"></li>
+                    <li> <a href="#" class="ul-list"> 企业采购</a></li>
+                    <li class="spacer"></li>
+                    <li> <a href="#" class="ul-list"> 客户服务</a><i class="iconfont">&#xe6cd;</i></li>
+                    <li class="spacer"></li>
+                    <li> <a href="#" class="ul-list"> 网站导航</a><i class="iconfont">&#xe6cd;</i></li>
+                    <li class="spacer"></li>
+                    <li> <a href="#" class="ul-list"> 手机京东</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

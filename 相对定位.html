@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位</title>
+    <style>
+        /* 
+        通过定位将元素摆放到任意位置
+         */
+        .box1,.box2,.box3{
+            font-size: 50px;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: chocolate;
+        }
+        /* 
+        偏移量(offset)
+         */
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: cornflowerblue;
+            position: relative;
+            left: 200px;
+            top: -200px;
+            /* bottom: 50px; */
+
+        }
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+</body>
+</html>

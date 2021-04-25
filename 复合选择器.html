@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器</title>
+    <style>
+        /* 
+        交集选择器 
+            作用：选中同时符合多个条件的元素
+            语法：满足选择器1同时满足选择器2
+            选择器1选择器2...
+            如果有标签选择器，必须由标签选择器开头
+         */
+         p#pop{
+             color: aqua;
+         }
+         /* 
+         并集选择器
+            作用：同时选择多个选择器对应的元素
+            语法：选择器1，选择器2，
+
+          */
+          .dog,.cat{
+              color: rgb(196, 255, 209);
+          }
+    </style>
+</head>
+<body>
+    <p id="pop" >浮生只会樽前老</p>
+    <p class="cat">雪满长安道</p>
+    <p class="dog">欲买桂花同载酒</p>
+    <p class="baby">终不似</p>
+    <p>少年游</p>
+</body>
+</html>

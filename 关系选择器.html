@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        关系选择器：
+            子元素选择器
+            后代选择器
+            兄弟选择器
+
+         */
+         /* 
+         子元素选择器
+            语法：父元素>子元素
+          */
+          /* div>p{
+              color: aqua;
+          } */
+
+          /* 
+          后代元素
+            语法：父元素 子元素
+           */
+           /* div span{
+               color: aquamarine;
+           } */
+           /* 
+           兄弟选择器
+            语法：前一个+后一个
+            前一个~后一个选择所有兄弟元素
+            */
+        p~span{
+            color: chocolate;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        我是一个div
+        <p>我是div里的p
+            <span>我是p里的span</span>
+        </p>
+        <span>我是div里的span1</span>
+        <span>我是div里的span1</span>
+    </div>
+</body>
+</html>

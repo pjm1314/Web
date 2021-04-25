@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        一般有：的都是伪类
+        ：first-child:第一个子元素
+        ：last-child:第一个子元素
+        :nth-child():第n个子元素
+        2n或even是偶数
+        2n+1或odd是奇数
+        -以上这些伪类是根据所有的子元素进行排序
+         */
+         /* 
+         :first-of-type
+         :last-of-type
+         :nth-of-type
+         -这几个功能和上诉的类似，不同点是他们是在同类型元素中进行排序
+         
+          */
+         ul>li:first-child{
+             color: aqua;
+         }
+         ul>li:nth-child(3){
+             color: aquamarine;
+         }
+         ul>li:first-of-type{
+             color: aqua;
+         }
+    </style>
+</head>
+<body>
+    <ul>
+        <span>第</span>
+        <li>第0个</li>
+        <li>第1个</li>
+        <li>第2个</li>
+        <li>第3个</li>
+        <li>第4个</li>
+        <li>第5个</li>
+    </ul>
+</body>
+</html>

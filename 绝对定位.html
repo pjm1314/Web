@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        开启绝对定位的特点：
+            1.不设置偏移量元素不会发生偏移
+            2.元素会脱离文档流
+            3.会改变元素的性质，行内变块，块的宽和高被内容撑开
+            4.元素会提升一个层级
+         */
+         /* 
+         包含块：
+            离当前元素距离最近的祖先块元素
+          */
+          /* 
+          固定定位：
+            大部分特点和绝对定位相同
+            唯一不同的是固定定位是参考于浏览器的视口进行定位，不会随网页的滚动而滚动
+           */
+        .box1,
+        .box2,
+        .box3 {
+            font-size: 50px;
+        }
+
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: chocolate;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: cornflowerblue;
+            position: relative;
+
+
+
+        }
+
+        .box3 {
+            width: 200px;
+            height: 200px;
+            background-color: cyan;
+        }
+        .box4{
+            width: 100px;
+            height: 100px;
+            background-color: blanchedalmond;
+            /* position: relative; */
+        }
+        .box5{
+            width: 60px;
+            height: 60px;
+            background-color: brown;
+            position: absolute;
+            top: 0;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box1">1</div>
+    <div class="box2">2
+        <div class="box4">
+            <div class="box5">5</div>
+        </div>
+    </div>
+    <div class="box3">3</div>
+</body>
+
+</html>
