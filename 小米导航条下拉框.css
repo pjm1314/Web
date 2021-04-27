@@ -1,0 +1,40 @@
+.nav-bottom{
+    /* height: 228px; */
+    width: 1313px;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 100px ;
+    left: -85px;
+    line-height: 228px;
+    text-align: center;
+    /* background-color: violet; */
+    border-right: none;
+    /* display: block; */
+    transition: height 3s;
+}
+.nav-img{
+    width: 140px;
+    height: 100px;
+    margin-top: 45px;
+    margin-right: 15px;
+
+}
+.nav-list:hover .nav-bottom{
+display: block;
+height: 228px;
+border: 1px solid #e0e0e0;
+z-index: 2;
+}
+.nav-list .nav-items:hover~.nav-bottom{
+display: none;
+}
+.nav-bottom-item{
+    display: inline-block;
+    width: 2px;
+    height: 100px;
+    background-color: #e0e0e0;
+    margin-right: 15px;
+
+}
+
