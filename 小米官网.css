@@ -194,6 +194,13 @@
     width: 244px;
     overflow: hidden;
     border: none;
+    outline: none;
+    
+}
+.search-item:focus,
+.search-item:focus ~.header-search-right
+{
+    border: #ff6700 1px solid;
 }
 .no-sty-mqy>.iconfont{
     font-size: 30px;

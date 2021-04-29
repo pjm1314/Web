@@ -1,3 +1,6 @@
+.nav-bottom-img{
+    display: block;
+}
 .nav-bottom{
     /* height: 228px; */
     width: 1313px;
@@ -8,7 +11,7 @@
     left: -85px;
     line-height: 228px;
     text-align: center;
-    /* background-color: violet; */
+    background-color: white;
     border-right: none;
     /* display: block; */
     transition: height 3s;
@@ -37,4 +40,3 @@ display: none;
     margin-right: 15px;
 
 }
-
