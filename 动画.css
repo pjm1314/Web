@@ -1,0 +1,38 @@
+.box1{
+    width: 600px;
+    height: 600px;
+    background-color: darkgray;
+}
+.box2{
+    width: 100px;
+    height: 100px;
+    background-color:cyan;
+    /* transition: 4s; */
+    /* 设置box2的动画 */
+    /* animation-name: 对当前元素生效的关键帧的名字; */
+    animation-name:test ;
+    /* animation-duration: 动画的执行时间; */
+    animation-duration:4s ;
+}
+/* .box1:hover .box2{
+    margin-left: 500px;
+   
+} */
+/* 
+动画
+    动画和过渡类似，都是可以实现一些动态的效果
+        不同的是过渡需要在某个属性发生变化时才会触发
+        动画可以自动触发动态效果
+
+    设置动画效果必须先设置一个关键帧
+*/
+@keyframes test {
+    /* from表示动画的开始 也可以用0表示%*/
+    from{
+        margin-left: 0;
+    }
+    /* to表示动画的结束也可以使用100% */
+    to{
+        margin-left: 500px;
+    }
+}

@@ -1,0 +1,12 @@
+.box1{
+    background-image: url(./20210130160548115.png);
+    height: 271px;
+    width: 132px;
+    /* 设置背景图片原点位置 */
+    background-position: 0 0;
+    /* 设置图片过渡效果：过度时间是0.3s，过度效果是步进3步完成 */
+    transition: 0.3s steps(3);
+}
+.box1:hover{
+    background-position: -396px 0;
+}
