@@ -1,0 +1,49 @@
+html{
+    perspective: 800px;
+
+}
+.wrapper{
+    width: 200px;
+    height: 200px;
+    /* background-color: salmon; */
+    margin: 100px auto;
+    transform-style: preserve-3d;
+    /* transform: rotateX(45deg) rotateZ(45deg); */
+    animation: rotate 20s;
+}
+.wrapper div{
+    /* 设置透明效果 */
+    opacity: 0.8;
+    position: absolute;
+}
+img{
+    width: 200px;
+    height: 200px;
+    vertical-align: top;
+}
+.box1{
+    transform: rotateY(90deg) translateZ(100px);
+}
+.box2{
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.box3{
+    transform: rotateX(90deg) translateZ(100px);
+}
+.box4{
+    transform: rotateX(-90deg) translateZ(100px);
+}
+.box5{
+    transform: rotateX(0deg) translateZ(100px);
+}
+.box6{
+    transform: rotateY(180deg) translateZ(100px);
+}
+@keyframes rotate {
+    from{
+        transform: rotateX(0deg) rotateZ(0deg);
+    }
+    to{
+        transform: rotateX(360deg) rotateZ(360deg);
+    }
+}

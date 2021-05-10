@@ -1,0 +1,28 @@
+.inbox{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: aquamarine;
+    animation: forwards 2s ease-in ball;
+}
+.outbox{
+    width: 600px;
+    height: 600px;
+    border-bottom: black solid 10px;
+    overflow: hidden;
+}
+@keyframes ball {
+    from{
+        margin-top: 0;
+    }
+    33%{
+        margin-top: 500px;
+    }
+    66%{
+        margin-top: 100px;
+        animation: ease-out;
+    }
+    to{
+        margin-top: 500px;
+    }
+}

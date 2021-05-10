@@ -1,0 +1,65 @@
+.clock-wrapper{
+    width: 400px;
+    height: 400px;
+    border-radius: 100%;
+    /* background-color: chocolate; */
+    /* border: 2px solid black; */
+    position: relative;
+    background-image: url(../exercise/src=http___pic.wodingche.com_carimg_fgphhmpsy.jpeg&refer=http___pic.wodingche.jpg);
+    /* animation: run 3600s ; */
+    margin: 0 auto;
+    background-position-x: center;
+    background-size: cover;
+}
+.clock-wrapper div{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.hour-wrapper{
+    width: 60%;
+    height: 60%;
+    /* background-color: chartreuse; */
+    position: absolute;
+    animation: run 43200s linear infinite; 
+}
+.hour{
+    height: 50%;
+    width: 6px;
+    background-color: black;
+    
+}
+.min-wrapper{
+    width: 70%;
+    height: 70%;
+    /* background-color: blueviolet; */
+    position: absolute;
+    animation: run 3600s steps(60) infinite;
+}
+.min{
+    height: 50%;
+    width: 4px;
+    background-color: black;
+}
+.s-wrapper{
+    width: 80%;
+    height: 80%;
+    /* background-color: cadetblue; */
+    position: absolute;
+    animation: run 60s  steps(60) infinite;
+}
+.s{
+    height: 50%;
+    width: 2px;
+    background-color: red;
+}
+@keyframes run {
+    from{
+        transform: rotateZ(0);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
