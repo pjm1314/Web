@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * 在调用函数时，浏览器每次都会传递进两个隐含的参数
+			 * 1.函数的上下文对象this
+			 * 2.封装实参的对象arguments
+			 * -arguments是一个类数组对象
+			 * -它里边有一个属性叫做callee
+			 * 	这个属性对应一个函数对象，就是当前正在指向的函数的对象
+			 */
+			function fun(){
+				console.log(arguments[1]);
+				console.log(arguments.callee);
+			}
+			fun("hello",true);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

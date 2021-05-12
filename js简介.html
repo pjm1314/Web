@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--可以将js代码编写到外部js文件中，通过script标签引入-->
+		<!--script标签一旦引入外部文件，就不能编写代码了，即使写了浏览器也会忽略-->
+		<script type="text/javascript" src="js/script.js">
+			
+		</script>
+		<!--js代码需要写道script标签中-->
+		<script type="text/javascript">
+			/*
+			 * 控制浏览器弹出一个警告框
+			 * alert("哥，你好帅");
+			 * document.write("看我出不出来")
+			 * console.log("我在哪")
+			 */
+			
+			
+		</script>
+	</head>
+	<body>
+		<!--可以将js代码写到标签的onclick属性中
+			当我们点击时，js代码才会执行
+		-->
+		<button onclick="alert('你点我干嘛');">点我一下</button>
+		<!--也可以写到超链接的herf属性中-->
+		<a href="javascript:alter('让你点就就点');">你也点我一下</a>
+		<a href="javascript:;">你也点我一下</a>
+	</body>
+</html>

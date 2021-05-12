@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * 将其他的数据类型转换为Number
+			 * 转换方式一：
+			 * 		使用Number()函数
+			 * 			-字符串-->数字
+			 * 			1.纯数字直接转
+			 * 			2.如果有非数字的内容则转为NaN
+			 * 			3.如果是一个空串或全是空格的字符则转换为0
+			 * 			4.布尔值false转为0，true转为1
+			 * 				null-->0
+			 * 				undef-->NaN
+			 * 转换方式二：
+			 * 		-parseInt()把一个字符串转换为一个整数
+			 * 		-parseFloat()把一个字符串转换为浮点数
+			 */
+			/*
+			 * 将其他的数据类型转换为Boolean
+			 * -使用Booean()函数
+			 * 	数字-->布尔
+			 * 		除了0和NaN，其余的都是true
+			 * 	字符串-->布尔
+			 * 		除了空串，其余都是true
+			 * 	null和undefind都会转换为false
+			 * 	对象也会转换为true
+			 */
+			var a="123px";
+//			Number(a);
+			a=parseInt(a);
+			console.log(typeof a)
+			console.log(a);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

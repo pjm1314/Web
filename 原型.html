@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * 原型prototy
+			 * 如果函数在作为普通函数调用prototype没有任何作用
+			 * 当函数以构造函数形式调用时，它所创建的对象中都会有一个隐含的属性，
+			 * 指向该构造函数的原型对象，我们可以通过__proto__来访问该属性
+			 * 原型对象就相当于一个公共的区域，所有同一个类的实例都可以访问到这个原型对象
+			 * 当我们访问对象的一个属性或方法时，它会先在对象自身中寻找，如果有则直接使用，如果没有则会去原型对象中寻找，如果找到则直接使用
+			 * 
+			 */
+			function Person(){
+				
+			}
+			var p=new Person();
+			var p2=new Person();
+//			console.log(Person.prototype);
+			console.log(p.__proto__==Person.prototype);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * 封装到函数的代码不会立即执行，会在调用时执行
+			 */
+			var fun=new Function("console.log('Hellow')");
+			fun();
+			function fun2(){
+				console.log("你好");
+			}
+			console.log(fun2);
+			fun2();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

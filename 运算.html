@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * 任何值和NaN做运算都得NaN
+			 * 任何值和字符串相运算，会先转为字符串再拼串
+			 * 任意的数据类型+一个""即可以转为字符串类型
+			 */
+			/*
+			 * a++和++a的区别
+			 * 	-a++的值等于原变量的值(自增前的值)
+			 *  -++a的值等于原变量新值(自增后的值) 
+			 */
+//			var a=1+"hello"; 
+			var a=1;
+//			a++;
+//          var c=++a;
+			console.log(a++);
+//			console.log(c);
+			console.log(a);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

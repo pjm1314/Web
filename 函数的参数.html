@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function sum(a,b){
+//				console.log(a+b);
+				var d=a+b;
+				return d;
+			}
+			var result=sum(1,2);
+			console.log("result="+result);
+			console.log(sum());
+			var obj={
+				name:"孙悟空",
+				age:500,
+				sex:"男",
+				address:"花果山"
+			};
+			//枚举对象中的属性
+			//使用for....in语句
+			for(var n in obj){
+				console.log("属性名:"+n);
+				console.log("属性值:"+obj[n]);
+			}
+		</script>
+	</head>
+	<body>
+	</body>b
+</html>

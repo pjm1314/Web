@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * 创建一个对象
+			 */
+//			var obj={
+//				name:"孙悟空",
+//				age:18,
+//				sex:"男",
+//				sayName:function(){
+//					alert(this.name);
+//				}
+//			};
+//				var obj1={
+//				name:"猪八戒",
+//				age:18,
+//				sex:"男",
+//				sayName:function(){
+//					alert(this.name);
+//				}
+//			};
+//				var obj2={
+//				name:"沙和尚",
+//				age:18,
+//				sex:"男",
+//				sayName:function(){
+//					alert(this.name);
+//				}
+//			};
+//			obj.sayName();
+			/*
+			 * 使用工厂方法创建对象
+			 * 
+			 */
+			function creat(name,age,sex){
+				var obj=new Object();
+				obj.name=name;
+				obj.age=age;
+				obj.sex=sex;
+				obj.sayName=function(){
+					alert(this.name);
+				};
+				return obj;
+			};
+			var obj2=creat("孙悟空",18,"男");
+			var obj3=creat("白骨精",18,"女");
+			var obj4=creat("猪八戒",19,"男");
+			obj2.sayName();
+			obj3.sayName();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
