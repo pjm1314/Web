@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//创建一个字符串(在底层字符串是以字符数组的形式保存的)
+			var str="孙悟空";
+			console.log(str.length);
+			console.log(str.charAt(2));
+			//根据字符编码获取子符
+			result=String.fromCharCode(0x2692);
+			console.log(result);
+			result=str.slice(0,2);
+			console.log(result);
+			var str1="唐僧，孙悟空，猪八戒，沙悟净";
+			result1=str1.split("悟");
+			console.log(result1);
+			console.log(result1[0]);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
