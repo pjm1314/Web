@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/图片切换练习.css"/>
+	</head>
+	<body>
+		<p id="info"></p>
+		<div id="wrapper">
+			<img src="../../img/u=1179469345,1978485178&fm=26&gp=0.jpg"/>
+		</div>
+		<button id="prv">上一张</button>
+		<button id="next">下一张</button>
+		<script type="text/javascript">
+			var prv=document.getElementById("prv");
+			var next=document.getElementById("next");
+			//获取img标签
+			var img=document.getElementsByTagName("img")[0];
+			//创建一个数组，用来保存图片的路径
+			var imgArr=["../../img/u=1179469345,1978485178&fm=26&gp=0.jpg","../../img/u=2168706860,976610571&fm=26&gp=0.jpg",
+			"../../img/u=2560384187,2495360846&fm=26&gp=0.jpg","../../img/u=858926986,2601228269&fm=26&gp=0.png"];
+			//创建一个变量来保存当前正在显示的图片的索引
+			var index=0;
+			var info=document.getElementById("info");
+			info.innerHTML="一共有"+imgArr.length+"图片,"+"当前是第"+(index+1)+"张";
+			prv.onclick=function(){
+//				alert("上一张");
+				index--;
+				//判断index是否小于0
+				if(index<0){
+					index=imgArr.length-1;
+				}
+				img.src=imgArr[index];
+				info.innerHTML="一共有"+imgArr.length+"图片,"+"当前是第"+(index+1)+"张";
+			}
+			next.onclick=function() {
+//				alert("下一张");
+				index++;
+				if(index>imgArr.length-1){
+					index=0;
+				}
+				img.src=imgArr[index];
+				info.innerHTML="一共有"+imgArr.length+"图片,"+"当前是第"+(index+1)+"张";
+			}
+		</script>
+	</body>
+</html>

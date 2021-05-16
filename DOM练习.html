@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/Dom练习.css"/>
+	</head>
+	<body>
+		<div class="wrapper-top">
+			<p>
+				你喜欢哪个城市?
+			</p>
+			<ul id="city">
+				<li class="list-style" id="bj">北京</li>
+				<li class="list-style">上海</li>
+				<li class="list-style">东京</li>
+				<li class="list-style">首尔</li>
+			</ul>
+			<p>
+				你喜欢哪款单机游戏?
+			</p>
+			<ul id="game">
+				<li class="list-style" id="rl">红警</li>
+				<li class="list-style">实况</li>
+				<li class="list-style1">极品飞车</li>
+				<li class="list-style">魔兽</li>
+			</ul>
+			<p>
+				你手机的操作系统是?
+			</p>
+			<ul>
+				<li class="list-item1" id="phone">IOS</li>
+				<li class="list-item2" id="android">Android</li>
+				<li class="list-item3">Windows Phone</li>
+			</ul>
+		</div>
+		<div class="wrapper-bottom">
+			<p>
+				gender:
+				<input type="radio" name="gender" id="" value="Male" />Male
+				<input type="radio" name="gender" id="" value="Female" />Female
+			</p>
+			<p>
+				name:
+				<input type="text" id="username" value="abcde" name="name"/>
+			</p>
+		</div>
+		<div class="right-wrapper">
+			<button id="btn1">查找#bj节点</button>
+			<button id="btn2">查找所有li节点</button>
+			<button id="btn3">查找name=gender的所有节点</button>
+			<button id="btn4">查找#city下的所有li节点</button>
+			<button id="btn5">返回#city的所有子节点</button>
+			<button id="btn6">返回#phone的第一个字节点</button>
+			<button id="btn7">返回#bj的父节点</button>
+			<button id="btn8">返回#android的前一个兄弟节点</button>
+			<button id="btn9">返回#username的value属性值</button>
+			<button id="btn10">设置#uesrname的value属性值</button>
+			<button id="btn11">返回#bj的文本值</button>
+			
+		</div>
+		<script type="text/javascript">
+			document.getElementById("btn1").onclick=function(){
+				var bj=document.getElementById("bj");
+				alert(bj.innerHTML);
+			}
+			document.getElementById("btn2").onclick=function(){
+				var lis=document.getElementsByTagName("li");
+				for(var  i=0;i<lis.length;i++){
+					alert(lis[i].innerHTML);
+				}
+			}
+			document.getElementById("btn3").onclick=function(){
+				var inputs=document.getElementsByName("gender");
+				for (var i=0;i<inputs.length;i++) {
+					/*
+					 * innerHTML用于获取元素内部的HTML代码的
+					 * 对于自结束标签，这个属性没有意义
+					 */
+					alert(inputs[i].value);
+				}
+			}
+			document.getElementById("btn4").onclick=function(){
+			var city=document.getElementById("city").getElementsByTagName("li");
+			for (var i=0;i<city.length;i++) {
+				alert(city[i].innerHTML);
+			}
+			
+			}
+		</script>
+	</body>
+</html>
