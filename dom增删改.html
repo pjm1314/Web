@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/dom增删改.css"/>
+	</head>
+	<body>
+		<div class="wrapper">
+			<p>
+				你喜欢哪个城市?
+			</p>
+			<ul id="city">
+				<li id="bj">北京</li>
+				<li >上海</li>
+				<li >东京</li>
+				<li >首尔</li>
+			</ul>
+		</div>
+		<div class="right-wrapper">
+			<button id="btn1">创建一个广州节点添加到#city下</button>
+			<button id="btn2">将广州节点插到#bj前面</button>
+			<button id="btn3">使用广州节点替换#bj节点</button>
+			<button id="btn4">删除#bj节点</button>
+			<button id="btn5">读取#city内的HTML代码</button>
+			<button id="btn6">设置#bj内部的HTML代码</button>
+			
+		</div>
+		<script type="text/javascript">
+			var myClick=function(idStr,fun){
+				var btn=document.getElementById(idStr);
+				btn.onclick=fun;
+			}
+			myClick("btn1",function(){
+				//创建广州节点
+				//创建li元素节点
+				var li=document.createElement("li");
+				//创建文本节点
+				var text=document.createTextNode("广州");
+				//将广州设置为li子节点
+				li.appendChild(text);
+				//将广州添加到city下
+				var city=document.getElementById("city");
+				city.appendChild(li);
+			});
+				myClick("btn2",function(){
+				//创建广州节点
+				//创建li元素节点
+				var li=document.createElement("li");
+				//创建文本节点
+				var text=document.createTextNode("广州");
+				//将广州设置为li子节点
+				li.appendChild(text);
+				var bj=document.getElementById("bj");
+				var city=document.getElementById("city");
+				/*
+				 * insertBefore()
+				 * 语法：
+				 * -父节点.insertBefore(新节点,旧节点)
+				 */
+				city.insertBefore(li,bj);
+			});
+				myClick("btn3",function(){
+				//创建广州节点
+				//创建li元素节点
+				var li=document.createElement("li");
+				//创建文本节点
+				var text=document.createTextNode("广州");
+				li.appendChild(text);
+				var city=document.getElementById("city");
+				var bj=document.getElementById("bj");
+				city.replaceChild(li,bj);
+			});
+				myClick("btn4",function(){
+				var city=document.getElementById("city");
+				var bj=document.getElementById("bj");
+				city.removeChild(bj);
+				
+			});
+				myClick("btn5",function(){
+			var city=document.getElementById("city");
+			alert(city.innerHTML);
+			});
+				myClick("btn6",function(){
+			var bj=document.getElementById("bj");
+			bj.innerHTML="北平";
+			});
+		</script>
+	</body>
+	
+</html>

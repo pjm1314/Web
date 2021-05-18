@@ -1,0 +1,44 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+p{
+	margin-top: 20px;
+	margin-left: 5px;
+}
+li{
+	display: inline-block;
+	height: 30px;
+	width: 40px;
+	background-color: lawngreen;
+	text-align: center;
+	line-height: 30px;
+	margin-top: 20px;
+	margin-left: 5px;
+	font-size: 14px;
+}
+
+.wrapper{
+	width: 300px;
+	height: 100px;
+	/*background-color: aquamarine;*/
+	overflow: hidden;
+	margin-left: 200px;
+	border: solid black 1px;
+}
+.right-wrapper{
+	position: relative;
+	left: 530px;
+	top: -100px;
+}
+.right-wrapper button{
+	width: 300px;
+	height: 25px;
+	display: block;
+	margin-top: 10px;
+	background-color: rgba(189,193,189,.5);
+	text-align: center;
+}
+#btn1{
+	margin-top: 0;
+}
