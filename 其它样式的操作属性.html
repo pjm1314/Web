@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box1{
+				width: 100px;
+				height: 100px;
+				background-color: #FF253A;
+				padding: 10px;
+				border: 10px solid aqua;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box1=document.getElementById("box1");
+				var btn=document.getElementById("btn1");
+				var op=box1.offsetParent;
+				btn.onclick=function(){
+					/*
+					 * clientHeight包括内容区和内边距(只读)
+					 * offsetWidth包括内容区和内边距和边框
+					 * offsetParent找开启了定位的最近的祖先元素，如果都没开启则返回body
+					 * offsetLeft	返回元素的水平偏移位置(相对于其定位父元素)
+					 * offsetTop	返回元素的垂直偏移位置(相对于其定位父元素)
+					 * scrollHeight-scrollTop==clientHeight 说明垂直滚动条到底了
+					 * scrollWidth-scrollLeft==clientWidth 说明水平滚动条到底了
+					 * onscroll 该事件会在元素的滚动条滚动时触发
+					 */
+//					alert(box1.clientHeight);
+//					alert(box1.offsetWidth);
+					alert(op.id);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<button id="btn1">点我一下</button>
+		<br /><br />
+		<div id="box3" style="position: relative;">
+			<div id="box2" style="position: relative;">
+				<div id="box1"></div>
+			</div>
+		</div>
+		
+		
+	</body>
+</html>
