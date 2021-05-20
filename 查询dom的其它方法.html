@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div class="box1">
+			<div id="">
+				ss
+			</div>
+		</div>
+		<script type="text/javascript">
+			//获取body标签
+			/*
+			 * 在document中有一个属性body，它保存的是body的引用
+			 * 
+			 */
+			var body = document.body;
+			/*
+			 * document.documentElement保存的是html根标签
+			 */
+			var html = document.documentElement;
+			console.log(html);
+			/*
+			 * docuent.querySelector()
+			 * docuent.querySelectorAll()
+			 * -需要一个选择器的字符串作为参数，可以根据css选择器来查询一个元素节点对象
+			 * -使用该方法只会返回第一个元素
+			 */
+			var div = document.querySelector(".box1 div");
+			console.log(div.innerHTML);
+		</script>
+
+	</body>
+
+</html>

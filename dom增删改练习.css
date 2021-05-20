@@ -1,8 +1,21 @@
 table {
   border-collapse: collapse;
+  margin: 0 auto;
 }
 
 table, th, td {
   border: 1px solid black;
   text-align: center;
 }
+.wrapper{
+	width: 400px;
+	height: 200px;
+	border: 1px solid black;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+input{
+	display: inline-block;
+}
+
