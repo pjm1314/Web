@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box1{
+				width: 100px;
+				height: 100px;
+				background-color: #C0C0C0;
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				/*
+				 * div随鼠标移动
+				 * clientX,clientY是可见窗口的坐标
+				 * pageX是相对页面的坐标(IE8及以下不兼容)
+				 * 
+				 */
+				var box1=document.getElementById("box1");
+				document.onmousemove=function(event){
+					var x=event.pageX;
+					var y=event.pageY;
+					box1.style.left=x+"px";
+					box1.style.top=y+"px";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box1"></div>
+	</body>
+</html>

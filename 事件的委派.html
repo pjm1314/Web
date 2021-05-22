@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#u1 li{
+				/*list-style: none;*/
+			}
+			a{
+				/*display: block;*/
+				text-decoration: none;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var btn=document.getElementById("btn");
+				var u1=document.getElementById("u1");
+				btn.onclick=function(){
+					//创建li
+					var li=document.createElement("li");
+					li.innerHTML="<a href='javascrapt:;' class='link'>新的超链接</a>";
+					u1.appendChild(li);
+				}
+				var allA=document.getElementsByTagName("a");
+//				for (var i=0;i<allA.length;i++) {
+//					allA[i].onclick=function(){
+//						alert("我是响应函数")
+//					}
+//				}
+			/*
+			 * 事件的委派
+			 * -将事件统一绑定给祖先元素,这样后代元素的事件触发时会冒泡给祖先元素
+			 */
+				u1.onclick=function(event){
+					//如果触发事件的对象是我们期望的就执行
+					if(event.target.className=="link"){
+						alert("我是响应函数")
+					}
+					
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<button id="btn">添加超链接</button>
+		<ui id="u1">
+			<li>
+			<a href="javascrapt:;" class="link">超链接一</a>
+			</li>
+			<li>
+			<a href="javascrapt:;" class="link">超链接二</a>
+			</li>
+			<li>
+				<a href="javascrapt:;" class="link">超链接三</a>
+			</li>
+		</ui>
+	</body>
+</html>
