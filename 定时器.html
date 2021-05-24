@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				
+			}
+			#box1{
+				width: 100px;
+				height: 100px;
+				background-color: #FF253A;
+				position: absolute;
+				margin-top: 10px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box=document.getElementById("box1");
+				var btn=document.getElementById("btn");
+				btn.onclick=function(){
+					setInterval(function(){
+						//获取box1原来的left值
+						var oldValue=box.offsetLeft;
+						
+					},30);
+				}
+				/*
+				 * 浏览器兼容性
+				 */
+				function getStyle(obj,name){
+					if (window.getComputedStyle) {
+						//正常浏览器的方式，具有getComputedStyle方法
+						return getComputedStyle(obj,null)[name];
+					} else{
+						return obj.currentStyle[name];
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<button id="btn">点击按钮</button>
+		<div id="box1"></div>
+	</body>
+</html>

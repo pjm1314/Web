@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var count=document.getElementById("count");
+				/*
+				 * setInterval参数：
+				 * 1.回调函数
+				 * 2.每次调用间隔时间
+				 * 
+				 * 返回值
+				 * 返回一个Number类型的数据
+				 * 这个数字用来作为定时器的唯一标识
+				 */
+				var num=1;
+				var timer=setInterval(function(){
+					count.innerHTML=num++
+					if (num ==60) {
+						clearInterval(timer);
+					} 
+				},1000);
+			}
+		</script>
+	</head>
+	<body>
+		<h1 id="count"></h1>
+	</body>
+</html>

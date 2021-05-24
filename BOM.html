@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * BOM(浏览器对象模型)
+			 */
+//			alert(navigator.userAgent);
+			/*
+			 * 如果通过userAgent不能判断，还可以通过一些浏览器中特有的对象，来判断浏览器的信息
+			 * 比如：ActiveXObject
+			 */
+			if ("ActiveXObject" in window) {
+				alert("我是IE")
+			}else{
+				alert("我不是IE")
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

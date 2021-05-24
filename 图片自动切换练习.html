@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				/*
+				 * 图片自动切换
+				 */
+				var img1=document.getElementById("img1");
+				var imgArr=["../../img/u=1179469345,1978485178&fm=26&gp=0.jpg","../../img/u=2168706860,976610571&fm=26&gp=0.jpg",
+				"../../img/u=2560384187,2495360846&fm=26&gp=0.jpg",
+				"../../img/u=858926986,2601228269&fm=26&gp=0.png"]
+				var index=0;
+				//d定义一个变量，用来保存定时器的标识
+				var timer;
+				var btn=document.getElementById("btn");
+				btn.onclick=function(){
+					//在开启另一个定时器之前，需要关闭上一个
+					clearInterval(timer);
+					timer=setInterval(function(){
+					index++;
+					//判断索引是否超过最大索引
+					if(index>=imgArr.length){
+						index=0;
+					}
+					img1.src=imgArr[index];
+				},1000)
+				}
+				/*
+				 * 开启定时器，自动切换图片
+				 */
+				//为btn2绑定函数
+				var btn2=document.getElementById("btn2");
+				btn2.onclick=function(){
+					clearInterval(timer);
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<img src="../../img/u=1179469345,1978485178&fm=26&gp=0.jpg" id="img1"/>
+		<br />
+		<button id="btn">开始</button>
+		<button id="btn2">停止</button>
+	</body>
+</html>
