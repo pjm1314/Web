@@ -29,6 +29,8 @@
 					//为每一个超链接添加num属性
 					allA[i].num=i;
 					allA[i].onclick=function(){
+						//关闭定时器
+						clearInterval(timer);
 						//获取点击超链接的索引
 						index=this.num;
 						//切换图片
@@ -36,7 +38,8 @@
 						//修改选中的a
 						setA();
 						move(imglist,"left",-520*index,20,function(){
-							
+							//动画执行完毕，开启自动切换
+							autoChange();
 						})
 					}
 				}
@@ -55,10 +58,11 @@
 					//将选中的a设为黑色
 					allA[index].style.backgroundColor="#000000";
 				}
+				var timer;
 				//创建函数，开启自动切换图片
 				function autoChange(){
 					//开启一个定时器，来切换
-					setInterval(function(){
+					timer=setInterval(function(){
 						//索引自增
 						index++;
 						//判断index的值
