@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/完成轮播图.css" />
+		<script type="text/javascript" src="../tools.js">
+			
+		</script>
+		<script type="text/javascript">
+			window.onload = function() {
+				//获取img-list
+				var imglist = document.getElementById("img-list");
+				//获取img标签
+				var img = document.getElementsByTagName("img");
+				//设置img-list高度
+				imglist.style.width = 520 * img.length + "px";
+				//获取所有a
+				var allA = document.getElementsByTagName("a");
+				//默认图片索引
+				var index=0;
+				allA[index].style.backgroundColor = "#000000";
+				/*
+				 * 点击超链接切换到相应图片
+				 */
+				//为所有超链接绑定函数
+				for(var i=0;i<allA.length;i++){
+					//为每一个超链接添加num属性
+					allA[i].num=i;
+					allA[i].onclick=function(){
+						//获取点击超链接的索引
+						index=this.num;
+						//切换图片
+//						imglist.style.left=-520*index+"px";
+						//修改选中的a
+						setA();
+						move(imglist,"left",-520*index,20,function(){
+							
+						})
+					}
+				}
+				//自动切换图片
+				autoChange();
+				//创建一个方法来设置选中的a
+				function setA(){
+					//判断当前索引是否为最后一张
+					if(index>=img.length-1){
+						index=0;
+						imglist.style.left=0;
+					}
+					for (var i=0;i<allA.length;i++) {
+						allA[i].style.backgroundColor="";
+					}
+					//将选中的a设为黑色
+					allA[index].style.backgroundColor="#000000";
+				}
+				//创建函数，开启自动切换图片
+				function autoChange(){
+					//开启一个定时器，来切换
+					setInterval(function(){
+						//索引自增
+						index++;
+						//判断index的值
+						index %=img.length;
+						move(imglist,"left",-520*index,20,function(){
+							//修改导航按钮
+							setA();
+						})
+					},3000);
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<ul id="img-list">
+				<li><img src="../../img/u=1179469345,1978485178&fm=26&gp=0.jpg" /></li>
+				<li><img src="../../img/u=2168706860,976610571&fm=26&gp=0.jpg" /></li>
+				<li><img src="../../img/u=2560384187,2495360846&fm=26&gp=0.jpg" /></li>
+				<li><img src="../../img/u=858926986,2601228269&fm=26&gp=0.png" /></li>
+				<li><img src="../../img/u=1179469345,1978485178&fm=26&gp=0.jpg"/></li>
+			</ul>
+			<div id="nav">
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<a href="javascript:;"></a>
+				<!--<a href="javascript:;"></a>-->
+			</div>
+		</div>
+	</body>
+
+</html>
