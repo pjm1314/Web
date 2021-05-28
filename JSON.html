@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * JSON是一个特殊格式的字符换
+			 * JavaScript Object Notation（JavaScript 对象标记法）。
+			 * JSON字符串中的属性名必须加双引号
+			 * JSON类型
+			 * 对象{}、数组[]
+			 */
+			var json='{"name":"悟空","age":18}';
+//			console.log(typeof obj );
+			var o=JSON.parse(json);
+			console.log(o.name);
+			var obj={name:"八戒"};
+			var str=JSON.stringify(obj);
+			console.log(str);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
