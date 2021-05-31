@@ -1,62 +1,60 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<style type="text/css">
-			#box1{
-				width: 100px;
-				height: 100px;
-				background-color: #FF253A;
-				position: absolute;
-			}
-		</style>
-		<script type="text/javascript">
-			window.onload=function(){
-				//开启一个计时器，来控制div移动
-				var speed=10;
-				//创建一个变量表示方向
-				//通过修改dir影响移动方向
-				var dir=0;
-				setInterval(function(){
-						switch(dir){
-						case 37:
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            position: absolute;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            //通过dir来影响移动方向
+            let dir = 0;
+            //创建一个变量表示移动方向
+            let speed = 10;
+            //开启一个计时器来控制div移动
+            setInterval(function () {
+                switch (dir) {
+                    case 37:
 //						alert("向左");
-						box.style.left=box.offsetLeft-10+"px";
-						break;
-						case 38:
+                        box.style.left = box.offsetLeft - speed + "px";
+                        break;
+                    case 38:
 //						alert("向上");
-						box.style.top=box.offsetTop-10+"px";
-						break;
-						case 39:
+                        box.style.top = box.offsetTop - speed + "px";
+                        break;
+                    case 39:
 //						alert("向右");
-						box.style.left=box.offsetLeft+10+"px";
-						break;
-						case 40:
+                        box.style.left = box.offsetLeft + speed + "px";
+                        break;
+                    case 40:
 //						alert("向下");
-						box.style.top=box.offsetTop+10+"px";
-						break;
-					}
-				},30)
-				var box=document.getElementById("box1");
-				document.onkeydown=function(event){
-					event=event || window.event;
-					/*
-					 * 37左
-					 * 38上
-					 * 39右
-					 * 40下
-					 */
-				dir =event.keyCode;
-				}
-				//当按键松开时div不动
-				document.onkeyup=function(){
-					dir=0;
-				}
-			}
-		</script>
-	</head>
-	<body>
-		<div id="box1"></div>
-	</body>
+                        box.style.top = box.offsetTop + speed + "px";
+                        break;
+                }
+            }, 30)
+            let box = document.getElementById("box1");
+            document.onkeydown = function (event) {
+                dir = event.keyCode;
+            }
+            //当按键松开时div不动
+            document.onkeyup = function () {
+                dir = 0;
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="box1"></div>
+</body>
 </html>

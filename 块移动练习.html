@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            position: absolute;
+        }
+        #box2{
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            top: 200px;
+            position: absolute;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+
+            //获取按钮
+            let btn = document.getElementById("btn");
+            //获取box
+            let box = document.getElementById("box1");
+            let box1=document.getElementById("box2");
+            //定义一个计时器
+            let timer;
+            //定义一个变量表示移动的速度
+            let speed;
+            /*
+            * 点击按钮块向指定方向移动
+            * */
+            btn.onclick = function () {
+                // box1.timer = setInterval(function () {
+                //     let oldLeft = parseInt(getStyle(box, "left"));
+                //     let newLeft = oldLeft + speed;
+                //     box1.style.left = newLeft + "px";
+                //     if (newLeft == 400) {
+                //         clearInterval(box1.timer);
+                //     }
+                // }, 1000)
+                move(box,"top",400,20,function () {
+                    
+                })
+
+            }
+
+            /*
+            * 定义一个获取样式的方法
+            * */
+            function getStyle(obj, name) {
+                if (window.getComputedStyle) {
+                    return getComputedStyle(obj, null)[name];
+                }
+            }
+
+            /*
+            * 定义一个方法来移动元素
+            * */
+            function move(obj, attr, target, speed, callback) {
+                //关闭上一个计时器
+                clearInterval(obj.timer);
+            //获取当前的元素信息
+                let current = parseInt(getStyle(obj, name));
+                //判断速度的正负值
+                if (current>target){
+                    speed=-speed;
+                }
+                //开启一个计时器来执行动画效果
+                obj.timer=setInterval(function () {
+                    let oldValue = parseInt(getStyle(obj, attr));
+                    let newValue = oldValue + speed;
+                    //判断newValue是否大于target
+                    if((speed<0 && newValue<target)||(speed>0 && newValue>target)){
+                        newValue=target;
+                    }
+                    //将新值赋给obj
+                    obj.style[attr]=newValue+"px";
+                    //判断新值是否等于target
+                    if (newValue==target){
+                        clearInterval(obj.timer);
+                        //动画执行完毕执行回调函数,有则执行，反之
+                        callback || callback();
+                    }
+                },1000)
+
+            }
+        }
+    </script>
+</head>
+<body>
+<button id="btn">开始</button>
+<div id="box1"></div>
+<div id="box2"></div>
+</body>
+</html>
