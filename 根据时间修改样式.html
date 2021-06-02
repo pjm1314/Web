@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            //获取图片
+            var img = document.querySelector("img");
+            //获取div
+            var div = document.querySelector("div");
+            //获取时间
+            var date = new Date();
+            var hours = date.getHours();
+            //判断时间为上午还是下午
+            if (hours < 12) {
+                img.src = "../图片/上午.png";
+                div.innerHTML = "上午好";
+            } else if (hours > 12 && hours < 18) {
+                img.src = "../图片/下午.gif";
+                div.innerHTML = "下午好";
+            } else {
+                img.src = "../图片/晚上.jpg";
+                div.innerHTML = "晚上好";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <img src="../图片/上午.png" alt="">
+    <div>上午好</div>
+</body>
+
+</html>

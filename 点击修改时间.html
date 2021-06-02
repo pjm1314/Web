@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            width: 300px;
+            background-color: palevioletred;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var btn=document.querySelector("button");
+            var p=document.querySelector("p");
+            btn.onclick=function(){
+                p.innerHTML=getTime();
+            }
+        }
+        function getTime(){
+            var date=new Date();
+            //获取年份
+            var year=date.getFullYear();
+            //获取月份
+            var month=date.getMonth()+1;
+           //获取日
+           var dates=date.getDate();
+           var dayArr=['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+           var day=date.getDay();
+           var hours=date.getHours();
+           var minutes=date.getMinutes();
+           var second=date.getSeconds();
+           return "今天是:"+year+"年"+month+"月"+dates+"日"+dayArr[day]+hours+":"+minutes+":"+second;
+
+        }
+    </script>
+</head>
+<body>
+    <button>点击修改时间</button>
+    <p>变变变</p>
+</body>
+</html>

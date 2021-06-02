@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            //获取密码框
+            var password=document.getElementById("pwd");
+            //获取图标
+            var img=document.getElementById("pic");
+            //定义一个flag来切换文本框
+            var flag=0;
+            //点击图标切换眼睛状态
+            img.onclick=function(){
+                if (flag ===0) {
+                    pwd.type="text";
+                    img.src="../图片/睁眼.png"
+                    flag=1;
+                }else{
+                    pwd.type="password";
+                    img.src="../图片/闭眼.png"
+                    flag=0;
+                }
+              
+            }
+        }
+    </script>
+    <style>
+        .wrapper{
+            width: 400px;
+            border-bottom: palevioletred 1px solid;
+            margin:0 auto ;
+            position: relative;
+            
+        }
+        .wrapper input{
+            width: 370px;
+            height: 30px;
+            border: 0;
+            outline: none;
+        }
+        .wrapper img{
+            width: 30px;
+            height: 30px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <input type="password" name="" id="pwd">
+        <label for=""><img src="../图片/闭眼.png" alt="" id="pic"></label>
+        
+        
+    </div>
+</body>
+</html>
